@@ -7,6 +7,7 @@
 
 template<class T, template<typename...> class Container>
 class Quick : public SortTech<T, Container> {
+
 public:
     inline SortError sort(SortData<T>& data) override;
 
@@ -41,6 +42,7 @@ inline SortError Quick<T, Container>::sort(SortData<T>& data) {
 
     quickSort(data);
     return SE_SUCCESS;
+
 }
 
 #endif
