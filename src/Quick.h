@@ -5,8 +5,9 @@
 #include "SortError.h"
 #include "SortData.h"
 
-template <class T, template<typename...> class Container>
-class Quick : public SortTech<T, Container> {
+template <class T, template <typename...> class Container>
+class Quick : public SortTech<T, Container> 
+{
 
 public:
     inline SortError sort(SortData<T>& data) override;
@@ -30,8 +31,10 @@ public:
         T pivot = data[high];
         int i = low - 1;
 
-        for (int j = low; j < high; j++) {
-            if (data[j] < pivot) {
+        for (int j = low; j < high; j++) 
+        {
+            if (data[j] < pivot) 
+            {
                 i++;
                 data.swap(i, j);
             }
