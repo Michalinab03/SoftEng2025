@@ -10,12 +10,10 @@ class Quick : public SortTech<T, Container> {
 public:
     inline SortError sort(SortData<T>& data) override;
 
-    template <typename T>
     void quickSort(SortData<T>& data) {
         quickSortHelper(data, 0, data.size() - 1);
     }
 
-    template <typename T>
     void quickSortHelper(SortData<T>& data, int low, int high) {
         if (low < high) {
             int pivotIndex = partition(data, low, high);
@@ -24,7 +22,6 @@ public:
         }
     }
 
-    template <typename T>
     int partition(SortData<T>& data, int low, int high) {
         T pivot = data[high];
         int i = low - 1;
