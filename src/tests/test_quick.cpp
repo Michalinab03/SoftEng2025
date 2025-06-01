@@ -18,15 +18,14 @@ TEST(test_quick, AddFunction)
 
     const std::vector<int>& sorted_vec = data.data();
 
-    bool correct=true;
+    bool correct = true;
     for (size_t i = 1; i < sorted_vec.size(); ++i)
     {
-		if (sorted_vec[i - 1] <= sorted_vec[i])
-			correct=false;
+	if (sorted_vec[i - 1] <= sorted_vec[i])
+		correct = false;
     }
-
 	ASSERT_EQ(correct, true);
-    ASSERT_EQ(error, SE_SUCCESS);
+	ASSERT_EQ(error, SE_SUCCESS);
 }
 
 
