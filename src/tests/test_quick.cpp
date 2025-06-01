@@ -18,8 +18,9 @@ TEST(test_quick, AddFunction)
 
     const std::vector<int>& sorted_vec=data.data();
 
-    for (size_t i=1; i<sorted_vec.size(); ++i){
-        assert(sorted_vec[i-1]<=sorted_vec[i]);
+    for (size_t i=1; i < sorted_vec.size(); ++i)
+    {
+        assert(sorted_vec[i-1] <= sorted_vec[i]);
     }
     
     ASSERT_EQ(error, SE_SUCCESS);
