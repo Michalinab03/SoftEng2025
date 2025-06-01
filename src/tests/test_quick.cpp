@@ -16,7 +16,7 @@ TEST(test_quick, AddFunction)
 
     auto error = sorter->sort<int, std::vector, STT_QUICK>(data);
 
-    const std::vector<int> sorted_vec=data.get();
+    const std::vector<int>& sorted_vec=data.data();
 
     for (size_t i=1; i<sorted_vec.size(); ++i){
         assert(sorted_vec[i-1]<=sorted_vec[i]);
