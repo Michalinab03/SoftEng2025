@@ -22,7 +22,7 @@ TEST(test_quick, AddFunction)
     {
         assert(sorted_vec[i - 1] <= sorted_vec[i]);
     }
-    ASSERT_EQ(error, SE_SUCCESS);
+    assert(error == SE_SUCCESS);
 }
 
 
